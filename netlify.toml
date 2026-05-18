@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+# Purge Cloudflare cache after every successful deploy. Requires Netlify env var
+# CLOUDFLARE_API_TOKEN to be set (cache:purge-scoped token for this zone).
+[[plugins]]
+  package = "./netlify/plugins/cf-purge"
+  [plugins.inputs]
+    zoneId = "237fff11377c635a3f2998e57a6b2488"

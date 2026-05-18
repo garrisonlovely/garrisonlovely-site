@@ -1,0 +1,5 @@
+name: cf-purge
+inputs:
+  - name: zoneId
+    description: Cloudflare zone ID for the site
+    required: true
