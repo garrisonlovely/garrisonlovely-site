@@ -1,7 +1,19 @@
 [build]
   publish = "."
 
-# /red = preview of the red theme + new red cover (July 2026). Main site is still mint.
+# /red (a.k.a. /blue) = theme preview: baby-blue accents, new cover, book panel
+# styled to match obsoletebook.org. Main site is still mint. Both paths serve the
+# same file — /red kept alive because the link is already shared around.
+[[redirects]]
+  from = "/blue"
+  to = "/index-red.html"
+  status = 200
+
+[[redirects]]
+  from = "/blue/"
+  to = "/index-red.html"
+  status = 200
+
 [[redirects]]
   from = "/red"
   to = "/index-red.html"
