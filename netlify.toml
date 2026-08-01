@@ -1,6 +1,17 @@
 [build]
   publish = "."
 
+# /red = preview of the red theme + new red cover (July 2026). Main site is still mint.
+[[redirects]]
+  from = "/red"
+  to = "/index-red.html"
+  status = 200
+
+[[redirects]]
+  from = "/red/"
+  to = "/index-red.html"
+  status = 200
+
 # Purge Cloudflare cache after every successful deploy. Requires Netlify env var
 # CLOUDFLARE_API_TOKEN to be set (cache:purge-scoped token for this zone).
 [[plugins]]
