@@ -7,9 +7,8 @@
     --ink-soft: #2a2a28;
     --cream: #f9f9f9;
     --cream-warm: #ffffff;
-    /* names kept from the mint theme so this file stays a drop-in swap */
-    --mint: #8ecae6;       /* baby blue — on dark panels + as button fill */
-    --mint-deep: #2e7ba6;  /* deeper blue — link text on light backgrounds */
+    --mint: #3fe0ac;
+    --mint-deep: #2bb389;
     --rule: #e2e2e2;
     --muted: #6b6b6b;
 }
@@ -108,7 +107,7 @@ img { max-width: 100%; height: auto; display: block; }
     border-radius: 2px;
     transition: background 0.2s;
 }
-.nav-cta:hover { background: #a9dcf2; }
+.nav-cta:hover { background: #5cebbe; }
 @media (max-width: 800px) {
     .nav-inner {
         flex-wrap: wrap;
@@ -145,8 +144,8 @@ img { max-width: 100%; height: auto; display: block; }
     position: absolute;
     inset: 0;
     background-image:
-        radial-gradient(circle at 20% 0%, rgba(142,202,230,0.06) 0%, transparent 40%),
-        radial-gradient(circle at 80% 100%, rgba(142,202,230,0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 0%, rgba(63,224,172,0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 100%, rgba(63,224,172,0.04) 0%, transparent 50%);
     pointer-events: none;
 }
 .hero-inner {
@@ -171,7 +170,7 @@ img { max-width: 100%; height: auto; display: block; }
     letter-spacing: 0.04em;
     color: var(--mint);
     margin-bottom: 28px;
-    text-shadow: 0 0 40px rgba(142,202,230,0.22);
+    text-shadow: 0 0 40px rgba(63,224,172,0.15);
 }
 .hero-subtitle {
     font-family: 'Newsreader', Georgia, serif;
@@ -246,7 +245,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-trailer a {
     color: var(--mint);
     text-decoration: none;
-    border-bottom: 1px solid rgba(142,202,230,0.45);
+    border-bottom: 1px solid rgba(63,224,172,0.4);
     transition: border-color 0.2s;
 }
 .hero-trailer a:hover { border-color: var(--mint); }
@@ -277,9 +276,9 @@ img { max-width: 100%; height: auto; display: block; }
     cursor: pointer;
 }
 .btn-primary:hover {
-    background: #a9dcf2;
+    background: #5cebbe;
     transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(142,202,230,0.28);
+    box-shadow: 0 8px 24px rgba(63,224,172,0.2);
 }
 .btn-primary .arrow { transition: transform 0.2s; }
 .btn-primary:hover .arrow { transform: translateX(3px); }
@@ -438,24 +437,10 @@ section {
 .work-link:hover { color: var(--mint-deep); }
 
 /* ============ BOOK PROMO CARD (cross-promo) ============ */
-/* Typography and glow mirror the obsoletebook.org hero so the two read as one
-   piece of design. */
 .book-promo {
     background: var(--ink);
     color: var(--cream);
-    position: relative;
-    overflow: hidden;
 }
-.book-promo::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(circle at 20% 0%, rgba(216,70,62,0.05) 0%, transparent 40%),
-        radial-gradient(circle at 80% 100%, rgba(216,70,62,0.04) 0%, transparent 50%);
-    pointer-events: none;
-}
-.book-promo .section-inner { position: relative; }
 .book-promo .section-inner {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -465,11 +450,8 @@ section {
 .book-promo-cover img {
     max-width: 320px;
     width: 100%;
-    /* transparent-PNG cover on the black panel: drop-shadow follows the book's
-       silhouette, box-shadow would draw a rectangle around empty pixels */
-    filter:
-        drop-shadow(0 24px 48px rgba(0,0,0,0.7))
-        drop-shadow(0 0 60px rgba(216,70,62,0.12));
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    border-radius: 2px;
 }
 .book-promo-text .section-title { color: var(--cream); margin-bottom: 24px; }
 .book-promo-text p {
@@ -481,32 +463,11 @@ section {
 }
 .book-promo-meta {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
+    font-size: 12px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #d8463e;                /* stays cover red, matches obsoletebook.org */
-    margin-bottom: 26px;
-}
-.book-promo-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    font-size: clamp(40px, 5.5vw, 76px);
-    line-height: 0.95;
-    letter-spacing: 0.06em;
-    color: #d8463e;                /* stays cover red, matches obsoletebook.org */
-    margin-bottom: 24px;
-    text-shadow: 0 0 40px rgba(216,70,62,0.15);
-}
-.book-promo-subtitle {
-    font-family: 'Newsreader', Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(20px, 2.1vw, 27px);
-    line-height: 1.32;
-    color: rgba(246,241,232,0.92);
-    margin-bottom: 28px;
-    max-width: 560px;
+    color: rgba(246,241,232,0.5);
+    margin-bottom: 12px;
 }
 @media (max-width: 800px) {
     .book-promo .section-inner { grid-template-columns: 1fr; gap: 40px; }

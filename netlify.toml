@@ -1,27 +1,37 @@
 [build]
   publish = "."
 
-# /red (a.k.a. /blue) = theme preview: baby-blue accents, new cover, book panel
-# styled to match obsoletebook.org. Main site is still mint. Both paths serve the
-# same file — /red kept alive because the link is already shared around.
+# The baby-blue theme IS the main site as of July 2026.
+# /blue and /red still resolve there so previously shared links keep working.
+# /mint = the previous mint-accent site, preserved.
 [[redirects]]
   from = "/blue"
-  to = "/index-red.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/blue/"
-  to = "/index-red.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/red"
-  to = "/index-red.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/red/"
-  to = "/index-red.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/mint"
+  to = "/index-mint.html"
+  status = 200
+
+[[redirects]]
+  from = "/mint/"
+  to = "/index-mint.html"
   status = 200
 
 # Purge Cloudflare cache after every successful deploy. Requires Netlify env var
