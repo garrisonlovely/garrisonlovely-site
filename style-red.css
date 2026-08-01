@@ -438,10 +438,24 @@ section {
 .work-link:hover { color: var(--mint-deep); }
 
 /* ============ BOOK PROMO CARD (cross-promo) ============ */
+/* Typography and glow mirror the obsoletebook.org hero so the two read as one
+   piece of design. */
 .book-promo {
     background: var(--ink);
     color: var(--cream);
+    position: relative;
+    overflow: hidden;
 }
+.book-promo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 0%, rgba(216,70,62,0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 100%, rgba(216,70,62,0.04) 0%, transparent 50%);
+    pointer-events: none;
+}
+.book-promo .section-inner { position: relative; }
 .book-promo .section-inner {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -467,11 +481,32 @@ section {
 }
 .book-promo-meta {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.16em;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(246,241,232,0.5);
-    margin-bottom: 12px;
+    color: var(--mint);            /* cover red */
+    margin-bottom: 26px;
+}
+.book-promo-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: clamp(40px, 5.5vw, 76px);
+    line-height: 0.95;
+    letter-spacing: 0.06em;
+    color: var(--mint);            /* cover red */
+    margin-bottom: 24px;
+    text-shadow: 0 0 40px rgba(216,70,62,0.15);
+}
+.book-promo-subtitle {
+    font-family: 'Newsreader', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2.1vw, 27px);
+    line-height: 1.32;
+    color: rgba(246,241,232,0.92);
+    margin-bottom: 28px;
+    max-width: 560px;
 }
 @media (max-width: 800px) {
     .book-promo .section-inner { grid-template-columns: 1fr; gap: 40px; }
