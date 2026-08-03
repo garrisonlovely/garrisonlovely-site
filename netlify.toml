@@ -40,3 +40,14 @@
   package = "./netlify/plugins/cf-purge"
   [plugins.inputs]
     zoneId = "237fff11377c635a3f2998e57a6b2488"
+
+# /events = homepage variant with the book-tour section (Aug 2026 preview).
+[[redirects]]
+  from = "/events"
+  to = "/index-events.html"
+  status = 200
+
+[[redirects]]
+  from = "/events/"
+  to = "/index-events.html"
+  status = 200
