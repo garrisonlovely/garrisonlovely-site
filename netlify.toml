@@ -41,10 +41,16 @@
   [plugins.inputs]
     zoneId = "237fff11377c635a3f2998e57a6b2488"
 
-# Podcast site preview — kept out of search indexes at the header level too,
-# in case the meta tag is missed. Deliberately NOT listed in robots.txt, since
-# that file is public and would advertise the path.
-[[headers]]
-  for = "/oatm-preview/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive, nosnippet"
+# The podcast site moved to its own domain on 2026-08-24. The preview path
+# redirects so any link shared while it lived here still lands somewhere real.
+[[redirects]]
+  from = "/oatm-preview/*"
+  to = "https://oatmpod.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/oatm-preview"
+  to = "https://oatmpod.com/"
+  status = 301
+  force = true
