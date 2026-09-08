@@ -52,6 +52,7 @@
       .chart-frame { background: #ffffff; border: 1px solid var(--rule); border-radius: 2px; padding: 20px; margin: 0 0 18px; }
       .chart-frame a { display: block; }
       .chart-frame img { margin: 0 auto; }
+      .chart-frame img.tall { max-width: min(100%, 560px); } /* portrait chart: cap on desktop, never wider than the frame on phones */
       .chart-frame a:hover img { opacity: 0.94; }
       figcaption { max-width: 760px; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.6; color: var(--ink-soft); }
       figcaption .source { display: block; margin-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em; color: var(--muted); }
@@ -199,7 +200,7 @@
             <h3 class="chart-title">Young workers see a decrease of nearly 16 percent in employment due to AI</h3>
             <div class="chart-frame">
                 <a href="/book-charts/07-young-workers-employment-politico.png" target="_blank" rel="noopener">
-                    <img src="/book-charts/07-young-workers-employment-politico.png" width="1200" height="1542" loading="lazy" style="max-width: 560px;" alt="Line chart from Politico showing monthly employment change for workers aged 22 to 25 in the top 20 percent of occupations most exposed to AI. The line bounces between roughly minus 6 and plus 2 percent from 2021 through 2024, then falls steeply through 2025 to minus 15.7 percent. Data: Stanford Digital Economy Lab.">
+                    <img src="/book-charts/07-young-workers-employment-politico.png" width="1200" height="1542" loading="lazy" class="tall" alt="Line chart from Politico showing monthly employment change for workers aged 22 to 25 in the top 20 percent of occupations most exposed to AI. The line bounces between roughly minus 6 and plus 2 percent from 2021 through 2024, then falls steeply through 2025 to minus 15.7 percent. Data: Stanford Digital Economy Lab.">
                 </a>
             </div>
             <figcaption>Monthly employment change for workers aged 22 to 25 in the fifth of occupations most exposed to AI. The line wobbles around zero from 2021 through 2024, then falls off a cliff, ending at minus 15.7 percent.
