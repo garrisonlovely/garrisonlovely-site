@@ -54,3 +54,15 @@
   to = "https://oatmpod.com/"
   status = 301
   force = true
+
+# /charts -> the Obsolete charts page (short URL for audiobook listeners).
+# The chart images live in /book-charts/, so this exact-match redirect never shadows them.
+[[redirects]]
+  from = "/charts"
+  to = "/obsolete-charts"
+  status = 301
+
+[[redirects]]
+  from = "/charts/"
+  to = "/obsolete-charts"
+  status = 301
