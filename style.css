@@ -479,7 +479,9 @@ section {
     margin-bottom: 28px;
     max-width: 560px;
 }
-.book-promo-meta {
+/* Scoped under .book-promo-text so these beat the generic `.book-promo-text p` rule
+   above (which otherwise wins on specificity and flattens both to 19px body text). */
+.book-promo-text .book-promo-meta {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
     font-weight: 500;
@@ -505,7 +507,7 @@ section {
     mask: url(obsolete-wordmark.png) no-repeat left center / contain;
     filter: drop-shadow(0 0 28px rgba(216,70,62,0.18));
 }
-.book-promo-subtitle {
+.book-promo-text .book-promo-subtitle {
     font-family: 'Roboto Condensed', 'Barlow Condensed', 'Arial Narrow', sans-serif;
     font-style: normal;
     font-weight: 300;
