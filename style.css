@@ -488,25 +488,33 @@ section {
     color: #d8463e;                /* stays cover red, matches obsoletebook.org */
     margin-bottom: 26px;
 }
+/* Title and subtitle mirror the obsoletebook.org hero: the cover's own OBSOLETE
+   wordmark (obsolete-wordmark.png, lifted from the flat front cover) used as a
+   mask so it takes the cover red, and the subtitle in the cover's light
+   condensed sans. Keep in step with .hero-wordmark / .hero-subtitle over there. */
 .book-promo-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 500;
-    font-size: clamp(40px, 5.5vw, 76px);
-    line-height: 0.95;
-    letter-spacing: 0.06em;
-    color: #d8463e;                /* stays cover red, matches obsoletebook.org */
-    margin-bottom: 24px;
-    text-shadow: 0 0 40px rgba(216,70,62,0.15);
+    margin: 0 0 26px;
+    line-height: 0;
+}
+.book-promo-wordmark {
+    display: block;
+    width: min(100%, 552px);
+    aspect-ratio: 1275 / 231;
+    background: #d8463e;
+    -webkit-mask: url(obsolete-wordmark.png) no-repeat left center / contain;
+    mask: url(obsolete-wordmark.png) no-repeat left center / contain;
+    filter: drop-shadow(0 0 28px rgba(216,70,62,0.18));
 }
 .book-promo-subtitle {
-    font-family: 'Newsreader', Georgia, serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(20px, 2.1vw, 27px);
+    font-family: 'Roboto Condensed', 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: clamp(22px, 2.5vw, 31px);
     line-height: 1.32;
+    letter-spacing: 0.07em;
     color: rgba(246,241,232,0.92);
     margin-bottom: 28px;
-    max-width: 560px;
+    max-width: 600px;
 }
 @media (max-width: 800px) {
     .book-promo .section-inner { grid-template-columns: 1fr; gap: 40px; }
