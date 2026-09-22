@@ -31,6 +31,7 @@ a { color: inherit; }
 ::selection { background: var(--mint); color: var(--ink); }
 
 img { max-width: 100%; height: auto; display: block; }
+picture { display: contents; }
 
 /* shared mono helpers */
 .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; letter-spacing: 0.02em; }
